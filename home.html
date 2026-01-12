@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spine-Safe Hypertrophy Program</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      margin: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #0ea5e9, #2563eb);
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 2.2rem; }
+    header p { opacity: 0.9; }
+    main { max-width: 1100px; margin: auto; padding: 2rem 1rem; }
+    section { background: #020617; border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    h2 { color: #38bdf8; margin-top: 0; }
+    h3 { color: #a5b4fc; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border-bottom: 1px solid #1e293b; padding: 0.6rem; text-align: left; }
+    th { color: #7dd3fc; font-weight: 600; }
+    ul { padding-left: 1.2rem; }
+    .time { color: #22c55e; font-weight: 600; }
+    .warning { background: #1f2937; border-left: 4px solid #ef4444; padding: 1rem; margin-top: 1rem; border-radius: 8px; }
+    footer { text-align: center; padding: 1.5rem; color: #94a3b8; font-size: 0.9rem; }
+
+    /* Accordion (Mobile-first) */
+    .accordion-header {
+      cursor: pointer;
+      padding: 1rem;
+      background: #020617;
+      border-radius: 12px;
+      border: 1px solid #1e293b;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .accordion-content { display: none; }
+    .accordion.active .accordion-content { display: block; }
+
+    /* Simple progress chart */
+    .chart {
+      margin-top: 1.5rem;
+    }
+    .bar {
+      background: #1e293b;
+      border-radius: 8px;
+      margin-bottom: 0.6rem;
+      overflow: hidden;
+    }
+    .bar span {
+      display: block;
+      height: 22px;
+      background: linear-gradient(90deg, #22c55e, #38bdf8);
+      text-align: right;
+      padding-right: 8px;
+      font-size: 0.8rem;
+      line-height: 22px;
+      color: #020617;
+      font-weight: 600;
+    }
+
+    @media (min-width: 768px) {
+      .accordion-content { display: block; }
+      .accordion-header { cursor: default; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Spine-Safe Hypertrophy Training Program</h1>
+  <p>Designed for muscle growth with herniated disc & nerve safety</p>
+  <nav style="margin-top:1.5rem;">
+    <a href="#day1" style="margin:0 10px;color:#e5e7eb;font-weight:600;text-decoration:none;">Day 1 – Push</a>
+    <a href="#day2" style="margin:0 10px;color:#e5e7eb;font-weight:600;text-decoration:none;">Day 2 – Lower</a>
+    <a href="#day3" style="margin:0 10px;color:#e5e7eb;font-weight:600;text-decoration:none;">Day 3 – Pull</a>
+    <a href="#rehab" style="margin:0 10px;color:#e5e7eb;font-weight:600;text-decoration:none;">Rehab</a>
+    <a href="#tracker" style="margin:0 10px;color:#e5e7eb;font-weight:600;text-decoration:none;">Progress</a>
+  </nav>
+</header>
+
+<main>
+
+<section>
+  <h2>Program Overview</h2>
+  <ul>
+    <li>Goal: Lean muscle gain with long-term spine health</li>
+    <li>Frequency: 4–5 days/week</li>
+    <li>Session Length: ~60 minutes</li>
+    <li>Focus: Machines, unilateral work, core stability</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Weekly Split & Time</h2>
+  <table>
+    <tr><th>Day</th><th>Workout</th><th>Duration</th></tr>
+    <tr><td>Day 1</td><td>Upper Push</td><td class="time">65–75 min</td></tr>
+    <tr><td>Day 2</td><td>Lower (Rehab-Friendly)</td><td class="time">55–65 min</td></tr>
+    <tr><td>Day 3</td><td>Pull</td><td class="time">65–75 min</td></tr>
+    <tr><td>Day 4</td><td>Core + Rehab</td><td class="time">35–45 min</td></tr>
+    <tr><td>Day 5</td><td>Optional Upper Pump</td><td class="time">40–50 min</td></tr>
+  </table>
+</section>
+
+<section id="day1" class="accordion">
+  <div class="accordion-header">Day 1 – Upper Push</div>
+  <div class="accordion-content">
+    <h3>Warm-Up (10 min)</h3>
+    <ul>
+      <li>5 min bike or treadmill</li>
+      <li>Band pull-aparts</li>
+      <li>Dead bug x10</li>
+    </ul>
+    <h3>Main Workout (50–55 min)</h3>
+    <table>
+      <tr><th>Exercise</th><th>Sets x Reps</th></tr>
+      <tr><td>Seated Chest Press</td><td>4 x 10–12</td></tr>
+      <tr><td>Incline DB Press</td><td>3 x 10</td></tr>
+      <tr><td>Cable Fly</td><td>3 x 12–15</td></tr>
+      <tr><td>Seated Lateral Raise</td><td>4 x 12–15</td></tr>
+      <tr><td>Rope Triceps Pushdown</td><td>3 x 12</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="day2" class="accordion">
+  <div class="accordion-header">Day 2 – Lower Body (Rehab)</div>
+  <div class="accordion-content">
+    <h3>Main Workout</h3>
+    <ul>
+      <li>Step-Ups – 3 x 10 / leg</li>
+      <li>Bulgarian Split Squat – 3 x 8 / leg</li>
+      <li>Seated Hamstring Curl – 4 x 12–15</li>
+      <li>Hip Thrust – 3 x 10</li>
+      <li>Seated Calf Raise – 4 x 15</li>
+    </ul>
+  </div>
+</section>
+
+<section id="day3" class="accordion">
+  <div class="accordion-header">Day 3 – Pull</div>
+  <div class="accordion-content">
+    <ul>
+      <li>Lat Pulldown – 4 x 10</li>
+      <li>Chest-Supported Row – 3 x 10</li>
+      <li>One-Arm Cable Row – 3 x 12</li>
+      <li>Face Pulls – 3 x 15</li>
+      <li>Rear Delts – 3 x 15</li>
+    </ul>
+  </div>
+</section>
+
+<section id="rehab">
+  <h2>Day 4 – Core & Rehab</h2>
+  <p><strong>Total time:</strong> <span class="time">35–45 min</span></p>
+  <h3>Core Stability</h3>
+  <ul>
+    <li>Dead Bug – 3 x 10</li>
+    <li>Side Plank – 3 x 25s / side</li>
+    <li>Pallof Press – 3 x 12</li>
+    <li>Bird Dog – 2 x 10</li>
+  </ul>
+
+  <h3>Mobility & Nerve Care</h3>
+  <ul>
+    <li>Cat–Cow</li>
+    <li>Hip flexor stretch</li>
+    <li>Hamstring flossing</li>
+    <li>Calf & foot stretching</li>
+  </ul>
+</section>
+
+<section id="tracker">
+  <h2>Weekly Progress Tracker</h2>
+  <p>Fill weekly values and visualize weight progression.</p>
+  <div class="chart">
+    <div>Week 1</div>
+    <div class="bar"><span style="width:20%">70kg</span></div>
+    <div>Week 2</div>
+    <div class="bar"><span style="width:40%">72kg</span></div>
+    <div>Week 3</div>
+    <div class="bar"><span style="width:60%">74kg</span></div>
+    <div>Week 4</div>
+    <div class="bar"><span style="width:80%">76kg</span></div>
+  </div>
+</section>
+
+<section class="warning">
+  <h2>⚠️ Safety Rules</h2>
+  <ul>
+    <li>No leg press, squats, deadlifts, or spinal compression</li>
+    <li>Stop immediately if nerve pain increases</li>
+    <li>Never train through sharp or radiating pain</li>
+    <li>Form and control > weight</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>Train smart. Protect your spine. Build muscle safely.</p>
+</footer>
+
+</body>
+</html>
