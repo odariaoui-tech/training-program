@@ -11,6 +11,7 @@
       color: #e5e7eb;
       margin: 0;
       line-height: 1.6;
+      padding-bottom: 70px; /* space for bottom tab bar */
     }
     header {
       background: linear-gradient(135deg, #0ea5e9, #2563eb);
@@ -31,7 +32,7 @@
     .warning { background: #1f2937; border-left: 4px solid #ef4444; padding: 1rem; margin-top: 1rem; border-radius: 8px; }
     footer { text-align: center; padding: 1.5rem; color: #94a3b8; font-size: 0.9rem; }
 
-    /* Accordion (Mobile-first) */
+    /* Accordion */
     .accordion-header {
       cursor: pointer;
       padding: 1rem;
@@ -44,16 +45,35 @@
     .accordion-content { display: none; }
     .accordion.active .accordion-content { display: block; }
 
-    /* Simple progress chart */
-    .chart {
-      margin-top: 1.5rem;
+    /* Bottom Tab Bar (iOS style) */
+    .tabbar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
+      background: #020617;
+      display: flex;
+      border-top: 1px solid #1e293b;
+      z-index: 1000;
     }
-    .bar {
-      background: #1e293b;
-      border-radius: 8px;
-      margin-bottom: 0.6rem;
-      overflow: hidden;
+    .tabbar a {
+      flex: 1;
+      text-align: center;
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.75rem;
+      padding-top: 8px;
     }
+    .tabbar a span {
+      display: block;
+      font-size: 1.1rem;
+    }
+    .tabbar a.active { color: #38bdf8; font-weight: 600; }
+
+    /* Progress chart */
+    .chart { margin-top: 1.5rem; }
+    .bar { background: #1e293b; border-radius: 8px; margin-bottom: 0.6rem; overflow: hidden; }
     .bar span {
       display: block;
       height: 22px;
@@ -69,6 +89,7 @@
     @media (min-width: 768px) {
       .accordion-content { display: block; }
       .accordion-header { cursor: default; }
+      .tabbar { display: none; }
     }
   </style>
 </head>
@@ -77,13 +98,6 @@
 <header>
   <h1>Spine-Safe Hypertrophy Training Program</h1>
   <p>Designed for muscle growth with herniated disc & nerve safety</p>
-  <nav style="margin-top:1.5rem;">
-    <a href="#day1" style="margin:0 10px;color:#e5e7eb;font-weight:600;text-decoration:none;">Day 1 – Push</a>
-    <a href="#day2" style="margin:0 10px;color:#e5e7eb;font-weight:600;text-decoration:none;">Day 2 – Lower</a>
-    <a href="#day3" style="margin:0 10px;color:#e5e7eb;font-weight:600;text-decoration:none;">Day 3 – Pull</a>
-    <a href="#rehab" style="margin:0 10px;color:#e5e7eb;font-weight:600;text-decoration:none;">Rehab</a>
-    <a href="#tracker" style="margin:0 10px;color:#e5e7eb;font-weight:600;text-decoration:none;">Progress</a>
-  </nav>
 </header>
 
 <main>
@@ -193,6 +207,70 @@
   </div>
 </section>
 
+<section id="nutrition">
+  <h2>Nutrition Program (Lean Bulk – Exact Grammes)</h2>
+  <p><strong>Target:</strong> ~3000 kcal/day • Lean bulk with minimal fat gain</p>
+
+  <table>
+    <tr><th>Macro</th><th>Daily Target</th></tr>
+    <tr><td>Calories</td><td>≈ 3000 kcal</td></tr>
+    <tr><td>Protein</td><td>150 g</td></tr>
+    <tr><td>Carbohydrates</td><td>380 g</td></tr>
+    <tr><td>Fats</td><td>75 g</td></tr>
+  </table>
+
+  <h3>Meal 1 – Breakfast</h3>
+  <ul>
+    <li>Whole eggs – <strong>3 eggs (180 g)</strong></li>
+    <li>Oats (dry) – <strong>80 g</strong></li>
+    <li>Banana – <strong>120 g</strong></li>
+    <li>Olive oil (cooking) – <strong>5 g</strong></li>
+  </ul>
+  <p><em>≈ 700 kcal • P: 35 g • C: 85 g • F: 25 g</em></p>
+
+  <h3>Meal 2 – Lunch</h3>
+  <ul>
+    <li>Chicken breast (cooked) – <strong>180 g</strong></li>
+    <li>Basmati rice (dry) – <strong>110 g</strong></li>
+    <li>Vegetables – <strong>150 g</strong></li>
+    <li>Olive oil – <strong>10 g</strong></li>
+  </ul>
+  <p><em>≈ 750 kcal • P: 45 g • C: 95 g • F: 18 g</em></p>
+
+  <h3>Meal 3 – Pre‑Workout Snack</h3>
+  <ul>
+    <li>Greek yogurt (0–2%) – <strong>200 g</strong></li>
+    <li>Almonds – <strong>25 g</strong></li>
+    <li>Apple – <strong>150 g</strong></li>
+  </ul>
+  <p><em>≈ 450 kcal • P: 25 g • C: 40 g • F: 18 g</em></p>
+
+  <h3>Meal 4 – Post‑Workout</h3>
+  <ul>
+    <li>Whey protein – <strong>30 g</strong></li>
+    <li>Banana – <strong>120 g</strong></li>
+    <li>Honey – <strong>10 g</strong></li>
+  </ul>
+  <p><em>≈ 300 kcal • P: 25 g • C: 45 g • F: 2 g</em></p>
+
+  <h3>Meal 5 – Dinner</h3>
+  <ul>
+    <li>Salmon / lean beef – <strong>170 g</strong></li>
+    <li>Potatoes (raw) – <strong>300 g</strong></li>
+    <li>Vegetables – <strong>150 g</strong></li>
+    <li>Olive oil – <strong>10 g</strong></li>
+  </ul>
+  <p><em>≈ 800 kcal • P: 40 g • C: 115 g • F: 25 g</em></p>
+
+  <h3>Supplements</h3>
+  <ul>
+    <li>Whey Protein – <strong>30 g post‑workout</strong></li>
+    <li>Creatine Monohydrate – <strong>5 g daily</strong></li>
+    <li>Omega‑3 – <strong>2–3 g/day</strong></li>
+    <li>Magnesium – <strong>300–400 mg before sleep</strong></li>
+  </ul>
+</section>
+
 <section class="warning">
   <h2>⚠️ Safety Rules</h2>
   <ul>
@@ -208,6 +286,14 @@
 <footer>
   <p>Train smart. Protect your spine. Build muscle safely.</p>
 </footer>
+
+<div class="tabbar">
+  <a href="#day1"><span>🏋️</span>Day 1</a>
+  <a href="#day2"><span>🦵</span>Day 2</a>
+  <a href="#day3"><span>💪</span>Day 3</a>
+  <a href="#rehab"><span>🧠</span>Rehab</a>
+  <a href="#nutrition"><span>🍽️</span>Food</a>
+</div>
 
 </body>
 </html>
