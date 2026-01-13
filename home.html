@@ -24,6 +24,26 @@
     section { background: #020617; border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
     h2 { color: #38bdf8; margin-top: 0; }
     h3 { color: #a5b4fc; }
+
+    /* Exercise cards */
+    .exercise {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 1rem;
+      align-items: center;
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .exercise img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .exercise strong { color: #7dd3fc; }
+
     table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
     th, td { border-bottom: 1px solid #1e293b; padding: 0.6rem; text-align: left; }
     th { color: #7dd3fc; font-weight: 600; }
@@ -45,7 +65,7 @@
     .accordion-content { display: none; }
     .accordion.active .accordion-content { display: block; }
 
-    /* Bottom Tab Bar (iOS style) */
+    /* Bottom Tab Bar */
     .tabbar {
       position: fixed;
       bottom: 0;
@@ -65,31 +85,14 @@
       font-size: 0.75rem;
       padding-top: 8px;
     }
-    .tabbar a span {
-      display: block;
-      font-size: 1.1rem;
-    }
+    .tabbar a span { display: block; font-size: 1.1rem; }
     .tabbar a.active { color: #38bdf8; font-weight: 600; }
-
-    /* Progress chart */
-    .chart { margin-top: 1.5rem; }
-    .bar { background: #1e293b; border-radius: 8px; margin-bottom: 0.6rem; overflow: hidden; }
-    .bar span {
-      display: block;
-      height: 22px;
-      background: linear-gradient(90deg, #22c55e, #38bdf8);
-      text-align: right;
-      padding-right: 8px;
-      font-size: 0.8rem;
-      line-height: 22px;
-      color: #020617;
-      font-weight: 600;
-    }
 
     @media (min-width: 768px) {
       .accordion-content { display: block; }
       .accordion-header { cursor: default; }
       .tabbar { display: none; }
+      .exercise { grid-template-columns: 140px 1fr; }
     }
   </style>
 </head>
@@ -146,29 +149,46 @@
 </section>
 
 <section id="day2" class="accordion">
-  <div class="accordion-header">Day 2 – Lower Body (Rehab)</div>
+  <div class="accordion-header">Day 2 – Lower Body (Rehab-Friendly)</div>
   <div class="accordion-content">
-    <h3>Main Workout</h3>
+    <h3>Warm-Up (10 min)</h3>
     <ul>
-      <li>Step-Ups – 3 x 10 / leg</li>
-      <li>Bulgarian Split Squat – 3 x 8 / leg</li>
-      <li>Seated Hamstring Curl – 4 x 12–15</li>
-      <li>Hip Thrust – 3 x 10</li>
-      <li>Seated Calf Raise – 4 x 15</li>
+      <li>5 min stationary bike</li>
+      <li>Hip circles & glute activation</li>
+      <li>Ankle mobility + foot activation</li>
     </ul>
+
+    <h3>Main Workout (45–50 min)</h3>
+    <table>
+      <tr><th>Exercise</th><th>Sets x Reps</th></tr>
+      <tr><td>Step-Ups (Low Box)</td><td>3 x 10 / leg</td></tr>
+      <tr><td>Bulgarian Split Squat</td><td>3 x 8 / leg</td></tr>
+      <tr><td>Seated Hamstring Curl</td><td>4 x 12–15</td></tr>
+      <tr><td>Hip Thrust (Machine or Pad)</td><td>3 x 10</td></tr>
+      <tr><td>Seated Calf Raise</td><td>4 x 15</td></tr>
+    </table>
   </div>
 </section>
 
 <section id="day3" class="accordion">
   <div class="accordion-header">Day 3 – Pull</div>
   <div class="accordion-content">
+    <h3>Warm-Up (10 min)</h3>
     <ul>
-      <li>Lat Pulldown – 4 x 10</li>
-      <li>Chest-Supported Row – 3 x 10</li>
-      <li>One-Arm Cable Row – 3 x 12</li>
-      <li>Face Pulls – 3 x 15</li>
-      <li>Rear Delts – 3 x 15</li>
+      <li>5 min rowing machine (light)</li>
+      <li>Band pull-aparts</li>
+      <li>Scapular retractions</li>
     </ul>
+
+    <h3>Main Workout (50–55 min)</h3>
+    <table>
+      <tr><th>Exercise</th><th>Sets x Reps</th></tr>
+      <tr><td>Lat Pulldown</td><td>4 x 10–12</td></tr>
+      <tr><td>Chest-Supported Row</td><td>3 x 10</td></tr>
+      <tr><td>One-Arm Cable Row</td><td>3 x 12 / side</td></tr>
+      <tr><td>Face Pulls</td><td>3 x 15</td></tr>
+      <tr><td>Rear Delt Fly (Cable or Machine)</td><td>3 x 15</td></tr>
+    </table>
   </div>
 </section>
 
