@@ -295,5 +295,42 @@
   <a href="#nutrition"><span>🍽️</span>Food</a>
 </div>
 
+<script>
+// Accordion toggle for mobile
+const accordions = document.querySelectorAll('.accordion-header');
+accordions.forEach(header => {
+  header.addEventListener('click', () => {
+    const parent = header.parentElement;
+    parent.classList.toggle('active');
+  });
+});
+
+// 🔧 FIX: open accordion when navigating via bottom tab / hash
+function openAccordionFromHash() {
+  const hash = window.location.hash;
+  if (!hash) return;
+  const section = document.querySelector(hash);
+  if (section && section.classList.contains('accordion')) {
+    section.classList.add('active');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+window.addEventListener('hashchange', openAccordionFromHash);
+window.addEventListener('load', openAccordionFromHash);
+
+// Bottom tab active state
+const tabs = document.querySelectorAll('.tabbar a');
+window.addEventListener('scroll', () => {
+  let fromTop = window.scrollY + 80;
+  tabs.forEach(link => {
+    const section = document.querySelector(link.getAttribute('href'));
+    if (section && section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+      tabs.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    }
+  });
+});
+</script>
 </body>
 </html>
